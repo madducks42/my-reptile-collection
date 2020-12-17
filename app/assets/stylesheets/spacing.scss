@@ -1,3 +1,32 @@
+// All Around Margin
+.m-0 {
+  margin: 0px;
+}
+
+.m-1 {
+  margin: .25rem;
+}
+
+.m-2 {
+  margin: .5rem;
+}
+
+.m-3 {
+  margin: .75rem;
+}
+
+.m-4 {
+  margin: 1rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
+.m-6 {
+  margin: 1.5rem;
+}
+
 // Margin Top
 .mt {
   margin-top: 0px;
@@ -112,6 +141,36 @@
 
 .ml-6 {
   margin-left: 1.5rem;
+}
+
+// All Around Padding
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-1 {
+  padding: .25rem;
+}
+
+.p-2 {
+  padding: .5rem;
+}
+
+.p-3 {
+  padding: .75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 // Padding Top

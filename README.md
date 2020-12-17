@@ -1,24 +1,50 @@
-# README
+# MY REPTILE COLLECTION
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* This is still a WIP and in the early stages of development *
 
-Things you may want to cover:
+My Reptile Application is a record keeping app for reptile owners. Users can create an account and then create records for each reptile they own including purchase history, lineage/morph information, and health records such as feeding and shedding history.
 
-* Ruby version
+Devise was used to handle user authentication and authorization. This application also uses CarrierWave, ActiveRecord, and ReactDropzone. Images are stored in AWS S3 Cloud Storage.
 
-* System dependencies
+## Built with
+- [Ruby on Rails](https://guides.rubyonrails.org/v5.2/)
+- [React.js](https://reactjs.org/docs/getting-started.html)
+- [PostgreSQL](https://www.postgresql.org/docs/13/index.html)
 
-* Configuration
+## Run Locally
+The setup steps expect the following tools/versions:
+- Ruby 2.7.2
+- Rails 6.1.0
+- PostgreSQL 13
 
-* Database creation
+###### Clone the Repo
+```
+git clone 
+```
+###### Install Dependencies
+```
+npm install 
+```
+```
+bundle install 
+```
 
-* Database initialization
+###### Create and seed the database
+```
+bundle exec rake db: migrate
+```
+```
+bundle exec rake db: seed
+```
 
-* How to run the test suite
+###### Run the test suite
+```
+bundle exec rspec
+```
+###### Start the Rails server and webpack-dev-server
+```
+bundle exec rails s
+npm run start
+```
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+###### The application can be accessed locally at <http://localhost:3000>
