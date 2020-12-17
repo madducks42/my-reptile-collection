@@ -52,3 +52,14 @@ gem 'valid_attribute', group: [:development, :test]
 gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'webpacker', '~> 3.3'
+
+gem 'faraday'
+gem 'active_model_serializers'
+gem 'activemodel-serializers-xml'
+gem 'mongo_mapper'
+gem 'bson_ext'
+gem "carrierwave"
+gem "fog-aws"
+gem 'lightbox2-rails'
+gem 'prettier'
+gem "bulma-rails", "~> 0.8.0"

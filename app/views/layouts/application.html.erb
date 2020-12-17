@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyReptileCollection</title>
+  <title>My Reptile Collection</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 </head>
 <body>
-  
-  <nav class="top-bar">
-    <h1><a href="/">MyReptileCollection</a></h1>
 
-    <section class="top-bar-section">
-      <ul class="right">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1>My Reptile Collection</h1>
+      </a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar-mobile">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbar-mobile" class="navbar-menu">
+
+      <div class="navbar-end">
         <%- if current_user -%>
-          <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
-      </ul>
-    </section>
+            <%= link_to 'Profile', user_path(current_user), class: 'navbar-item' %>
+            <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'navbar-item' %>
+          <%- else -%>
+            <%= link_to 'Sign In', new_user_session_path, class: 'navbar-item' %>
+            <%= link_to 'Sign Up', new_user_registration_path, class: 'navbar-item' %>
+          <%- end -%>
+      </div>
+    </div>
   </nav>
 
   <%- flash.each do |key, value| -%>
@@ -30,6 +43,10 @@
   <%- end -%>
 
   <%= yield %>
+
+  <footer class="has-text-centered footer">
+    <h3>&copy; My Reptile Collection</h3>
+  </footer>
 
   <%= javascript_include_tag 'application' %>
   
